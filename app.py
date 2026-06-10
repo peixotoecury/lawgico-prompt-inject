@@ -113,6 +113,14 @@ section[data-testid="stSidebar"] [data-testid="stFileUploaderDropzone"] span{
 /* Aviso */
 .aviso-revisao{background:#FEF3C7;border:1px solid #FCD34D;border-radius:8px;
   padding:10px 16px;font-size:12px;color:#713F12;margin-bottom:12px;}
+
+/* Remove padding topo padrão do Streamlit para header ficar colado */
+.main > div:first-child{padding-top:0!important;}
+div[data-testid="stAppViewBlockContainer"]{padding-top:0!important;}
+div[data-testid="block-container"]{padding-top:0!important;}
+.stMainBlockContainer{padding-top:0!important;}
+.stMain .block-container{padding-top:0!important;}
+section.main > div.block-container{padding-top:0!important;}
 </style>
 """, unsafe_allow_html=True)
 
@@ -124,17 +132,17 @@ with st.sidebar:
     st.components.v1.html("""
     <style>html,body{margin:0;padding:0;background:#001e36;}</style>
     <div style="padding:16px 16px 14px;border-bottom:1px solid rgba(0,169,224,.2);background:#001e36;">
-      <svg width="210" height="72" viewBox="0 0 210 72" xmlns="http://www.w3.org/2000/svg">
-        <text x="0" y="54" font-family="Arial Black,Arial,sans-serif" font-size="48"
+      <svg width="190" height="70" viewBox="0 0 190 70" xmlns="http://www.w3.org/2000/svg">
+        <text x="90" y="16" font-family="Arial,sans-serif" font-size="9"
+              font-weight="700" fill="#00A9E0" letter-spacing="1">prompt inject</text>
+        <text x="0" y="52" font-family="Arial,sans-serif" font-size="40"
               font-weight="900" fill="#FFFFFF" letter-spacing="-1">LAWgico</text>
-        <text x="88" y="16" font-family="Arial,sans-serif" font-size="10"
-              font-weight="700" fill="#00A9E0" letter-spacing="0.5">prompt inject</text>
-        <text x="0" y="68" font-family="Arial,sans-serif" font-size="9"
-              fill="#00A9E0" letter-spacing="1">lawyers at work</text>
+        <text x="2" y="66" font-family="Arial,sans-serif" font-size="8"
+              fill="#00A9E0" letter-spacing="2">lawyers at work</text>
       </svg>
       <div style="font-family:Arial,sans-serif;font-size:8px;color:rgba(255,255,255,.45);margin-top:1px;">Peixoto &amp; Cury Advogados</div>
     </div>
-    """, height=105, scrolling=False)
+    """, height=115, scrolling=False)
     if _key:
         st.markdown('<div style="font-size:11px;color:#10b981;margin-top:6px;">✅ IA configurada</div>',
                     unsafe_allow_html=True)
