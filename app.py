@@ -139,15 +139,15 @@ with st.sidebar:
             letter-spacing:.5px;margin-top:1px;}
     </style>
     <div class="wrap">
-      <div class="logo">
-        <div class="law">LAW</div>
-        <div class="gico-wrap">
-          <div class="tag">prompt inject</div>
-          <div class="gico">gico</div>
+      <div style="display:flex;align-items:flex-end;gap:0;line-height:1;">
+        <div style="font-family:Inter,sans-serif;font-size:32px;font-weight:900;color:#ffffff!important;letter-spacing:-1px;">LAW</div>
+        <div style="display:flex;flex-direction:column;align-items:flex-start;">
+          <div style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;color:#00A9E0!important;letter-spacing:.5px;text-transform:lowercase;line-height:1.2;">prompt inject</div>
+          <div style="font-family:Inter,sans-serif;font-size:32px;font-weight:900;color:#ffffff!important;letter-spacing:-1px;">gico</div>
         </div>
       </div>
-      <div class="sub1">lawyers at work</div>
-      <div class="sub2">Peixoto &amp; Cury Advogados</div>
+      <div style="font-family:Inter,sans-serif;font-size:9px;color:#00A9E0!important;letter-spacing:1.5px;margin-top:4px;text-transform:lowercase;">lawyers at work</div>
+      <div style="font-family:Inter,sans-serif;font-size:8px;color:rgba(255,255,255,.5)!important;letter-spacing:.5px;margin-top:1px;">Peixoto &amp; Cury Advogados</div>
     </div>
     """, height=105, scrolling=False)
 
