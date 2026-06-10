@@ -130,19 +130,22 @@ section.main > div.block-container{padding-top:0!important;}
 # ─────────────────────────────────────────────
 with st.sidebar:
     st.components.v1.html("""
-    <style>html,body{margin:0;padding:0;background:#001e36;}</style>
-    <div style="padding:16px 16px 14px;border-bottom:1px solid rgba(0,169,224,.2);background:#001e36;">
-      <svg width="190" height="70" viewBox="0 0 190 70" xmlns="http://www.w3.org/2000/svg">
-        <text x="90" y="16" font-family="Arial,sans-serif" font-size="9"
-              font-weight="700" fill="#00A9E0" letter-spacing="1">prompt inject</text>
-        <text x="0" y="52" font-family="Arial,sans-serif" font-size="40"
-              font-weight="900" fill="#FFFFFF" letter-spacing="-1">LAWgico</text>
-        <text x="2" y="66" font-family="Arial,sans-serif" font-size="8"
-              fill="#00A9E0" letter-spacing="2">lawyers at work</text>
-      </svg>
-      <div style="font-family:Arial,sans-serif;font-size:8px;color:rgba(255,255,255,.45);margin-top:1px;">Peixoto &amp; Cury Advogados</div>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+      html,body{margin:0;padding:0;background:#001e36;}
+      .logo-wrap{font-family:'Inter',Arial,sans-serif;line-height:1;padding:14px 16px 12px;border-bottom:1px solid rgba(0,169,224,.2);}
+      .logo-tag{font-size:9px;font-weight:700;color:#00A9E0;letter-spacing:1.5px;margin-bottom:3px;}
+      .logo-main{font-size:38px;font-weight:900;color:#fff;letter-spacing:-2px;line-height:1;}
+      .logo-sub{font-size:8px;font-weight:500;color:#00A9E0;letter-spacing:2.5px;margin-top:4px;text-transform:lowercase;}
+      .logo-firm{font-size:8px;color:rgba(255,255,255,.4);margin-top:3px;font-family:Arial,sans-serif;}
+    </style>
+    <div class="logo-wrap">
+      <div class="logo-tag">prompt inject</div>
+      <div class="logo-main">LAWgico</div>
+      <div class="logo-sub">lawyers at work</div>
+      <div class="logo-firm">Peixoto &amp; Cury Advogados</div>
     </div>
-    """, height=115, scrolling=False)
+    """, height=110, scrolling=False)
     if _key:
         st.markdown('<div style="font-size:11px;color:#10b981;margin-top:6px;">✅ IA configurada</div>',
                     unsafe_allow_html=True)
