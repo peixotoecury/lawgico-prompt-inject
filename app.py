@@ -136,8 +136,8 @@ with st.sidebar:
       .logo-wrap{font-family:'Inter',Arial,sans-serif;padding:14px 16px 12px;border-bottom:1px solid rgba(0,169,224,.2);}
       .logo-rel{position:relative;display:inline-block;line-height:1;}
       .logo-main{font-size:40px;font-weight:900;color:#fff;letter-spacing:-2px;line-height:1;display:block;}
-      .logo-tag{position:absolute;top:-13px;right:0;font-size:9px;font-weight:700;color:#fff;letter-spacing:2px;white-space:nowrap;}
-      .logo-sub{font-size:8px;font-weight:700;color:#fff;letter-spacing:3px;text-transform:lowercase;margin-top:5px;}
+      .logo-tag{position:absolute;top:-14px;right:0;font-size:10px;font-weight:900;color:#fff;letter-spacing:2px;white-space:nowrap;-webkit-font-smoothing:antialiased;}
+      .logo-sub{font-size:9px;font-weight:900;color:#fff;letter-spacing:3px;text-transform:lowercase;margin-top:5px;-webkit-font-smoothing:antialiased;}
       .logo-firm{font-size:8px;color:rgba(255,255,255,.4);margin-top:3px;}
     </style>
     <div class="logo-wrap">
