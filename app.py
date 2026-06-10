@@ -165,10 +165,10 @@ with st.sidebar:
     st.markdown("---")
     st.markdown("**UPLOAD**")
     pdfs = st.file_uploader(
-        "PDFs das petições iniciais",
+        "PDFs (qualquer peça processual)",
         type=["pdf"],
         accept_multiple_files=True,
-        help="Selecione um ou vários PDFs",
+        help="Petições iniciais, sentenças, laudos, contestações...",
     )
 
     st.markdown("---")
