@@ -42,6 +42,16 @@ section[data-testid="stSidebar"] .stSelectbox>div>div,
 section[data-testid="stSidebar"] input{
   background:rgba(255,255,255,.1)!important;
   border:1px solid rgba(0,169,224,.4)!important;color:#fff!important;border-radius:6px!important;}
+/* Botão de upload visível na sidebar */
+section[data-testid="stSidebar"] [data-testid="stFileUploaderDropzone"] button,
+section[data-testid="stSidebar"] [data-testid="stFileUploaderDropzone"] button *,
+section[data-testid="stSidebar"] [data-testid="stFileUploaderDropzone"] small{
+  color:#001e36!important;background:#00A9E0!important;border-radius:6px!important;}
+section[data-testid="stSidebar"] [data-testid="stFileUploaderDropzone"]{
+  background:rgba(255,255,255,.08)!important;border:1px dashed rgba(0,169,224,.5)!important;
+  border-radius:8px!important;}
+section[data-testid="stSidebar"] [data-testid="stFileUploaderDropzone"] span{
+  color:rgba(255,255,255,.6)!important;}
 
 .hdr{background:linear-gradient(135deg,#001e36 0%,#003B5C 100%);
   box-shadow:0 2px 8px rgba(0,0,0,.3);padding:10px 24px;
@@ -115,17 +125,21 @@ with st.sidebar:
     <style>
       *{margin:0;padding:0;box-sizing:border-box;}
       body{background:transparent;}
-      .wrap{padding:18px 16px 16px;border-bottom:1px solid rgba(0,169,224,.2);}
-      .wrap img{max-width:160px;height:auto;}
-      .sub{font-size:9px;color:rgba(255,255,255,.4);letter-spacing:1px;
-           font-family:'Inter',sans-serif;margin-top:6px;}
+      .wrap{padding:16px 16px 14px;border-bottom:1px solid rgba(0,169,224,.2);}
+      .wrap img{max-width:140px;height:auto;display:block;margin-bottom:10px;}
+      .prod{font-size:13px;font-weight:800;color:#fff;
+            font-family:'Inter',sans-serif;letter-spacing:-.2px;line-height:1.2;}
+      .prod span{color:#00A9E0;}
+      .sub{font-size:9px;color:rgba(255,255,255,.45);letter-spacing:.8px;
+           font-family:'Inter',sans-serif;margin-top:3px;text-transform:uppercase;}
     </style>
     <div class="wrap">
       <img src="https://www.peixotoecury.com.br/assets/images/ui/logo-light.png"
            alt="Peixoto &amp; Cury"/>
-      <div class="sub">LAWgico Prompt Inject &nbsp;·&nbsp; Controladoria</div>
+      <div class="prod">LAWgico <span>Prompt Inject</span></div>
+      <div class="sub">Controladoria · Time B</div>
     </div>
-    """, height=90, scrolling=False)
+    """, height=110, scrolling=False)
 
     if _key:
         st.markdown('<div style="font-size:11px;color:#10b981;margin-top:6px;">✅ IA configurada</div>',
