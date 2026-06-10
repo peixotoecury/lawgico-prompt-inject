@@ -116,7 +116,11 @@ section[data-testid="stSidebar"] [data-testid="stFileUploaderDropzone"] span{
 
 /* Reduz padding topo do Streamlit */
 .stMainBlockContainer{padding-top:0.5rem!important;}
-div[data-testid="stAppViewBlockContainer"]{padding-top:0.5rem!important;}
+[data-testid="stMainBlockContainer"]{padding-top:0.5rem!important;}
+[data-testid="stAppViewBlockContainer"]{padding-top:0.5rem!important;}
+section[data-testid="stMain"] .block-container{padding-top:0.5rem!important;}
+section[data-testid="stMain"] > div > div{padding-top:0.5rem!important;}
+.main .block-container{padding-top:0.5rem!important;}
 </style>
 """, unsafe_allow_html=True)
 
