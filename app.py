@@ -114,13 +114,9 @@ section[data-testid="stSidebar"] [data-testid="stFileUploaderDropzone"] span{
 .aviso-revisao{background:#FEF3C7;border:1px solid #FCD34D;border-radius:8px;
   padding:10px 16px;font-size:12px;color:#713F12;margin-bottom:12px;}
 
-/* Remove padding topo padrão do Streamlit para header ficar colado */
-.main > div:first-child{padding-top:0!important;}
-div[data-testid="stAppViewBlockContainer"]{padding-top:0!important;}
-div[data-testid="block-container"]{padding-top:0!important;}
-.stMainBlockContainer{padding-top:0!important;}
-.stMain .block-container{padding-top:0!important;}
-section.main > div.block-container{padding-top:0!important;}
+/* Reduz padding topo do Streamlit */
+.stMainBlockContainer{padding-top:0.5rem!important;}
+div[data-testid="stAppViewBlockContainer"]{padding-top:0.5rem!important;}
 </style>
 """, unsafe_allow_html=True)
 
@@ -133,15 +129,18 @@ with st.sidebar:
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
       html,body{margin:0;padding:0;background:#001e36;}
-      .logo-wrap{font-family:'Inter',Arial,sans-serif;line-height:1;padding:14px 16px 12px;border-bottom:1px solid rgba(0,169,224,.2);}
-      .logo-tag{font-size:9px;font-weight:700;color:#fff;letter-spacing:1.5px;margin-bottom:3px;}
-      .logo-main{font-size:38px;font-weight:900;color:#fff;letter-spacing:-2px;line-height:1;}
-      .logo-sub{font-size:8px;font-weight:500;color:#fff;letter-spacing:2.5px;margin-top:4px;text-transform:lowercase;}
-      .logo-firm{font-size:8px;color:rgba(255,255,255,.4);margin-top:3px;font-family:Arial,sans-serif;}
+      .logo-wrap{font-family:'Inter',Arial,sans-serif;padding:14px 16px 12px;border-bottom:1px solid rgba(0,169,224,.2);}
+      .logo-rel{position:relative;display:inline-block;line-height:1;}
+      .logo-main{font-size:40px;font-weight:900;color:#fff;letter-spacing:-2px;line-height:1;display:block;}
+      .logo-tag{position:absolute;top:-13px;right:0;font-size:9px;font-weight:700;color:#fff;letter-spacing:2px;white-space:nowrap;}
+      .logo-sub{font-size:8px;font-weight:700;color:#fff;letter-spacing:3px;text-transform:lowercase;margin-top:5px;}
+      .logo-firm{font-size:8px;color:rgba(255,255,255,.4);margin-top:3px;}
     </style>
     <div class="logo-wrap">
-      <div class="logo-tag">prompt inject</div>
-      <div class="logo-main">LAWgico</div>
+      <div class="logo-rel">
+        <span class="logo-tag">prompt inject</span>
+        <span class="logo-main">LAWgico</span>
+      </div>
       <div class="logo-sub">lawyers at work</div>
       <div class="logo-firm">Peixoto &amp; Cury Advogados</div>
     </div>
