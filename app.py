@@ -123,23 +123,33 @@ section[data-testid="stSidebar"] [data-testid="stFileUploaderDropzone"] span{
 with st.sidebar:
     st.components.v1.html("""
     <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
       *{margin:0;padding:0;box-sizing:border-box;}
-      body{background:transparent;}
-      .wrap{padding:16px 16px 14px;border-bottom:1px solid rgba(0,169,224,.2);}
-      .wrap img{max-width:140px;height:auto;display:block;margin-bottom:10px;}
-      .prod{font-size:13px;font-weight:800;color:#fff;
-            font-family:'Inter',sans-serif;letter-spacing:-.2px;line-height:1.2;}
-      .prod span{color:#00A9E0;}
-      .sub{font-size:9px;color:rgba(255,255,255,.45);letter-spacing:.8px;
-           font-family:'Inter',sans-serif;margin-top:3px;text-transform:uppercase;}
+      html,body{background:#001e36;width:100%;height:100%;}
+      .wrap{padding:18px 16px 16px;border-bottom:1px solid rgba(0,169,224,.2);background:#001e36;}
+      .logo{display:flex;align-items:flex-end;gap:0;line-height:1;}
+      .law{font-family:'Inter',sans-serif;font-size:32px;font-weight:900;color:#fff;letter-spacing:-1px;}
+      .gico-wrap{display:flex;flex-direction:column;align-items:flex-start;}
+      .tag{font-family:'Inter',sans-serif;font-size:9px;font-weight:700;color:#00A9E0;
+           letter-spacing:.5px;text-transform:lowercase;margin-bottom:0px;line-height:1.1;}
+      .gico{font-family:'Inter',sans-serif;font-size:32px;font-weight:900;color:#fff;letter-spacing:-1px;}
+      .sub1{font-family:'Inter',sans-serif;font-size:9px;color:#00A9E0;
+            letter-spacing:1.5px;margin-top:4px;text-transform:lowercase;}
+      .sub2{font-family:'Inter',sans-serif;font-size:8px;color:rgba(255,255,255,.45);
+            letter-spacing:.5px;margin-top:1px;}
     </style>
     <div class="wrap">
-      <img src="https://www.peixotoecury.com.br/assets/images/ui/logo-light.png"
-           alt="Peixoto &amp; Cury"/>
-      <div class="prod">LAWgico <span>Prompt Inject</span></div>
-      <div class="sub">Controladoria · Time B</div>
+      <div class="logo">
+        <div class="law">LAW</div>
+        <div class="gico-wrap">
+          <div class="tag">prompt inject</div>
+          <div class="gico">gico</div>
+        </div>
+      </div>
+      <div class="sub1">lawyers at work</div>
+      <div class="sub2">Peixoto &amp; Cury Advogados</div>
     </div>
-    """, height=110, scrolling=False)
+    """, height=105, scrolling=False)
 
     if _key:
         st.markdown('<div style="font-size:11px;color:#10b981;margin-top:6px;">✅ IA configurada</div>',
