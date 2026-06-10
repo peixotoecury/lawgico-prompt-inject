@@ -56,7 +56,7 @@ section[data-testid="stSidebar"] [data-testid="stFileUploaderDropzone"] span{
 .hdr{background:linear-gradient(135deg,#001e36 0%,#003B5C 100%);
   box-shadow:0 2px 8px rgba(0,0,0,.3);padding:10px 24px;
   display:flex;align-items:center;gap:14px;
-  margin:0 -5rem 20px -5rem;padding-left:5.5rem;padding-right:2rem;}
+  margin:-6rem -5rem 20px -5rem;padding-left:5.5rem;padding-right:2rem;}
 .hdr-div{width:1px;height:40px;background:rgba(255,255,255,.15);}
 .hdr-info h1{font-size:15px;font-weight:700;color:#fff;margin:0;}
 .hdr-info .sub{font-size:10px;color:#90c8e0;margin-top:2px;}
