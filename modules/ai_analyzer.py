@@ -132,7 +132,6 @@ def analisar_com_ia(
     response = client.messages.create(
         model="claude-opus-4-8",
         max_tokens=4096,
-        thinking={"type": "adaptive"},
         system=PROMPT_SISTEMA,
         tools=[TOOL_ANALISE],
         tool_choice={"type": "tool", "name": "resultado_analise"},
