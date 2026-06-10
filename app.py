@@ -114,13 +114,13 @@ section[data-testid="stSidebar"] [data-testid="stFileUploaderDropzone"] span{
 .aviso-revisao{background:#FEF3C7;border:1px solid #FCD34D;border-radius:8px;
   padding:10px 16px;font-size:12px;color:#713F12;margin-bottom:12px;}
 
-/* Reduz padding topo do Streamlit */
-.stMainBlockContainer{padding-top:0.5rem!important;}
-[data-testid="stMainBlockContainer"]{padding-top:0.5rem!important;}
-[data-testid="stAppViewBlockContainer"]{padding-top:0.5rem!important;}
-section[data-testid="stMain"] .block-container{padding-top:0.5rem!important;}
-section[data-testid="stMain"] > div > div{padding-top:0.5rem!important;}
-.main .block-container{padding-top:0.5rem!important;}
+/* Remove padding topo Streamlit — seletores abrangentes */
+[data-testid*="Block"]{padding-top:0!important;}
+[class*="block-container"]{padding-top:0!important;}
+[class*="BlockContainer"]{padding-top:0!important;}
+section[data-testid="stMain"]{padding-top:0!important;}
+section[data-testid="stMain"] > div{padding-top:0!important;}
+section[data-testid="stMain"] > div > div{padding-top:0!important;}
 </style>
 """, unsafe_allow_html=True)
 
