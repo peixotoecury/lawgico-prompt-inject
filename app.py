@@ -122,35 +122,19 @@ section[data-testid="stSidebar"] [data-testid="stFileUploaderDropzone"] span{
 # ─────────────────────────────────────────────
 with st.sidebar:
     st.components.v1.html("""
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
-      *{margin:0;padding:0;box-sizing:border-box;}
-      html,body{background:#001e36;width:100%;height:100%;}
-      .wrap{padding:18px 16px 16px;border-bottom:1px solid rgba(0,169,224,.2);background:#001e36;}
-      .logo{display:flex;align-items:flex-end;gap:0;line-height:1;}
-      .law{font-family:'Inter',sans-serif;font-size:32px;font-weight:900;color:#fff;letter-spacing:-1px;}
-      .gico-wrap{display:flex;flex-direction:column;align-items:flex-start;}
-      .tag{font-family:'Inter',sans-serif;font-size:9px;font-weight:700;color:#00A9E0;
-           letter-spacing:.5px;text-transform:lowercase;margin-bottom:0px;line-height:1.1;}
-      .gico{font-family:'Inter',sans-serif;font-size:32px;font-weight:900;color:#fff;letter-spacing:-1px;}
-      .sub1{font-family:'Inter',sans-serif;font-size:9px;color:#00A9E0;
-            letter-spacing:1.5px;margin-top:4px;text-transform:lowercase;}
-      .sub2{font-family:'Inter',sans-serif;font-size:8px;color:rgba(255,255,255,.45);
-            letter-spacing:.5px;margin-top:1px;}
-    </style>
-    <div class="wrap">
-      <div style="display:flex;align-items:flex-end;gap:0;line-height:1;">
-        <div style="font-family:Inter,sans-serif;font-size:32px;font-weight:900;color:#ffffff!important;letter-spacing:-1px;">LAW</div>
-        <div style="display:flex;flex-direction:column;align-items:flex-start;">
-          <div style="font-family:Inter,sans-serif;font-size:9px;font-weight:700;color:#00A9E0!important;letter-spacing:.5px;text-transform:lowercase;line-height:1.2;">prompt inject</div>
-          <div style="font-family:Inter,sans-serif;font-size:32px;font-weight:900;color:#ffffff!important;letter-spacing:-1px;">gico</div>
-        </div>
-      </div>
-      <div style="font-family:Inter,sans-serif;font-size:9px;color:#00A9E0!important;letter-spacing:1.5px;margin-top:4px;text-transform:lowercase;">lawyers at work</div>
-      <div style="font-family:Inter,sans-serif;font-size:8px;color:rgba(255,255,255,.5)!important;letter-spacing:.5px;margin-top:1px;">Peixoto &amp; Cury Advogados</div>
+    <style>html,body{margin:0;padding:0;background:#001e36;}</style>
+    <div style="padding:16px 16px 14px;border-bottom:1px solid rgba(0,169,224,.2);background:#001e36;">
+      <svg width="210" height="72" viewBox="0 0 210 72" xmlns="http://www.w3.org/2000/svg">
+        <text x="0" y="54" font-family="Arial Black,Arial,sans-serif" font-size="48"
+              font-weight="900" fill="#FFFFFF" letter-spacing="-1">LAWgico</text>
+        <text x="88" y="16" font-family="Arial,sans-serif" font-size="10"
+              font-weight="700" fill="#00A9E0" letter-spacing="0.5">prompt inject</text>
+        <text x="0" y="68" font-family="Arial,sans-serif" font-size="9"
+              fill="#00A9E0" letter-spacing="1">lawyers at work</text>
+      </svg>
+      <div style="font-family:Arial,sans-serif;font-size:8px;color:rgba(255,255,255,.45);margin-top:1px;">Peixoto &amp; Cury Advogados</div>
     </div>
     """, height=105, scrolling=False)
-
     if _key:
         st.markdown('<div style="font-size:11px;color:#10b981;margin-top:6px;">✅ IA configurada</div>',
                     unsafe_allow_html=True)
@@ -621,3 +605,4 @@ with tab_rel:
 
         resumo_text = "\n".join(resumo_lines)
         st.text_area("Resumo para Teams / e-mail", value=resumo_text, height=160)
+
